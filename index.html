@@ -1,10 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Para ti </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para ti </title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#000;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+text-align:center;
+}
+
+#inicio,#video{
+position:absolute;
+width:100%;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+h1{
+font-size:3em;
+margin-bottom:20px;
+}
+
+p{
+font-size:1.2em;
+margin-bottom:30px;
+max-width:700px;
+line-height:1.6;
+}
+
+button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:50px;
+background:#ff2d55;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+background:#ff4f75;
+}
+
+#video{
+display:none;
+background:black;
+}
+
+video{
+width:90%;
+max-width:900px;
+border-radius:20px;
+box-shadow:0 0 30px rgba(255,255,255,.2);
+}
+</style>
+
 </head>
 <body>
-    <h1>Hola, mi amor </h1>
-    <p>Esta página apenas está comenzando...</p>
+
+<div id="inicio">
+
+<h1>Hola, mi amor </h1>
+
+<p>
+Tengo una sorpresa para ti...
+Cada segundo contigo ha hecho mi vida muchísimo más feliz.
+Gracias por existir y por permitirme amarte.
+Espero que este pequeño detalle te saque una sonrisa.
+</p>
+
+<button onclick="mostrarVideo()">
+Comenzar
+</button>
+
+</div>
+
+<div id="video">
+
+<video controls autoplay>
+<source src="mi%20amor.mp4" type="video/mp4">
+Tu navegador no puede reproducir el video.
+</video>
+
+</div>
+
+<script>
+
+function mostrarVideo(){
+document.getElementById("inicio").style.display="none";
+document.getElementById("video").style.display="flex";
+}
+
+</script>
+
 </body>
 </html>
